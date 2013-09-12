@@ -29,12 +29,12 @@ img.photo-head {
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
 
-  font-size: 4em;
+  font-size: 3em;
+  margin-right: 0.1em;
 }
 
-a.symbol:before {
-  content: attr(title);
-  margin-right: 0.3em;
-  font-size: 130%;
+a:hover {
+  color: red;
 }
+
 
