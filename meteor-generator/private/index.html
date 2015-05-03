@@ -1,6 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <meta name="description" content="Slava Kim. Software Engineer in San Francisco. Resume.">
+     <link rel="author" href="https://plus.google.com/+SlavaKim"/>
+     <meta name="twitter:image" content="https://slv.io/img/photo@2x.jpg">
 
      <title>Slava Kim - Resume</title>
 
@@ -30,6 +33,7 @@
         dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; margin-bottom: 50px; height: 15px; }
+        dd + dd { margin-top: 20px; }
         dl img {
           float: right;
           max-width: 100px;
@@ -60,12 +64,15 @@ ga('send', 'pageview');
               {{> icon name="envelope"}}: <a href="mailto:imslavko+resume@gmail.com">imslavko@gmail.com</a> <br/>
               {{> icon name="github"}}: <a href="https://github.com/Slava">Slava</a> <br />
               {{> icon name="twitter"}}: <a href="https://twitter.com/imslavko">@imslavko</a> <br />
-              {{> icon name="home"}}: <a href="https://devblog.me">Homepage</a> <br />
+              {{> icon name="home"}}: <a href="http://devblog.me">Homepage</a> <br />
             </p>
         </div>
         <div id="objective">
             <p>
-I am a professional software developer, based in San Francisco. Have been coding since high school when I won multiple awards in world-class programming competitions. Having worked in a couple of startups, fresh out of school, I developed and contributed to a top-10 most-starred project on GitHub.
+I am a professional software developer, based in San Francisco. While being a
+high school student I won multiple awards in world-class programming
+competitions. I worked in a couple of startups fresh out of school. I
+developed and contributed to a top-10 most-starred project on GitHub.
             </p>
         </div>
         <div class="clear"></div>
@@ -108,7 +115,7 @@ application (prototype in C#, final product in JS/HTML).
 In 2012 I took three years after high school to work in Silicon Valley startups.
 In 2015 I got admitted to MIT undergraduate program, Course 6.
             {{/subsection}}
-            {{#subsection icon="graduation-cap" name="Kazakh-turkish High School" extra="Karaganda, Kazakhstan - 2007-2012"}}
+            {{#subsection icon="graduation-cap" name="Kazakh-Turkish Lyceum" extra="Karaganda, Kazakhstan - 2007-2012"}}
 ![Katev logo](img/katev-logo.png)
 
 In this boys-only boarding school on the edge of my hometown I
@@ -147,7 +154,7 @@ things](http://web.mit.edu/6.033/2014/wwwdocs/schedule.shtml).  {{/subsection}}
           {{/section}}
 
           {{#section name="Open Source Software"}}
-            {{#subsection name="meteor/meteor" icon="github" extra="24 130" extraIcon="star"}}
+            {{#subsection name="meteor/meteor" icon="github" extra="25 517" extraIcon="star"}}
 Being a Core Developer employed by Meteor Development Group, contributed more
 than 1300 patches (currently a top 3 contributor). Shipped major features.
 Maintained older projects. Reviewed submitted pull requests. Managed public
@@ -155,7 +162,7 @@ issue tracker. Worked with the community.
 
 [Meteor](https://github.com/meteor/meteor) is GitHub's top 10 most popular project of all time.
             {{/subsection}}
-            {{#subsection name="slava/tern-meteor" icon="github" extra="233" extraIcon="star"}}
+            {{#subsection name="slava/tern-meteor" icon="github" extra="250" extraIcon="star"}}
 #### [Tern for Meteor](https://github.com/Slava/tern-meteor)
 
 A plugin for text-editors such as Vim, Emacs, Sublime Text and others. This
@@ -169,7 +176,14 @@ intellegence, autocompletion of 3rd party packages, client/server autocompletion
 separation depending on the context. Other features, such as "jump to
 definition" or "go to documentation".
             {{/subsection}}
-            {{#subsection name="slava/meteor-gmail" icon="github" extra="36" extraIcon="star"}}
+            {{#subsection name="slava/meteor-rethinkdb" icon="github" extra="114" extraIcon="star"}}
+A Meteor integration with [RethinkDB](http://rethinkdb.com), a NoSQL database
+that positions itself as an "open-source database for realtime web".
+
+The integration included an integration of a client-side cache, DDP RPC methods,
+research on the latency compensation options and more.
+            {{/subsection}}
+            {{#subsection name="slava/meteor-gmail" icon="github" extra="42" extraIcon="star"}}
 A Meteor smart package that utilizes GMail API to poll data and provide soft
 real-time notifications when the set of emails matching the query changes.
 
@@ -182,7 +196,7 @@ a query:
 
           {{#section name="Competitive Programming"}}
             {{#subsection name="International Olympiad in Infromatics" extra="2011-2012" icon="trophy"}}
-![IOI logo](/img/ioi-logo.png)
+[![IOI logo](/img/ioi-logo.png)](http://www.ioinformatics.org/)
 
 IOI is an annual algorithmic programming competition for high school students.
 More information in
@@ -217,6 +231,23 @@ Russian available
 Coached top 30 students from the whole country for two summers. Developed an
 online course with videos and problem sets in association with the "Daryn" -
 National Scientific Pedagogical Center.
+            {{/subsection}}
+          {{/section}}
+          {{#section name="Recorded Talks"}}
+            {{#subsection name="Meteor Devshop Talks" icon="video-camera"}}
+- [Making Windows a first class Meteor development platform](https://www.youtube.com/watch?v=tNoJr_xLgSs) (with Sashko Stubailo)
+- [Meteor for Mobile](https://www.youtube.com/watch?v=4dJLPLWMImw) (with Matt Arbesfeld and Sashko Stubailo)
+- [What does it mean to be a realtime database?](https://www.youtube.com/watch?v=nEjIjJ3TC40)
+- [Don't get bitten by mungos (or Mongos)](https://www.youtube.com/watch?v=amaR4Aqe0s0)
+- [Experimental Redis Support](https://www.youtube.com/watch?v=-Vnb8tjnE3k)
+- [Profiling Blaze](https://www.youtube.com/watch?v=0pO96dEySF0)
+- [Meteor autocompletion for Sublime Text](https://www.youtube.com/watch?v=OxzdNZCxPjk), [Meteor autocompletion](https://www.youtube.com/watch?v=CcPZ56t8x4I)
+            {{/subsection}}
+            {{#subsection name="JSConf 2014" icon="video-camera"}}
+"Reactive Programming Made Simple". A talk on JSConf 2014 in Singapore about a
+subproject of Meteor called [Tracker](https://www.meteor.com/tracker). A video
+recording is available on
+[YouTube](https://www.youtube.com/watch?v=CjzZif7z9SE).
             {{/subsection}}
           {{/section}}
         </dl>
