@@ -5,13 +5,13 @@
      <link rel="author" href="https://plus.google.com/+SlavaKim"/>
      <meta name="twitter:image" content="https://slv.io/img/head.png">
 
-     <title>Slava Kim - Resume</title>
+     <title>Slava Kim - MISTI Resume</title>
 
      <style type="text/css">
         * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; }
+        body { font: 14px Helvetica, Sans-Serif; line-height: 20px; }
         .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #page-wrap { width: 800px; margin: 20px auto 40px; }
         #pic {
           max-height: 260px; max-width: 200px;
           border: 10px solid white;
@@ -30,10 +30,10 @@
         ul { margin: 0 0 32px 17px; }
         #objective { width: 500px; float: left; }
         #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; margin-bottom: 50px; height: 15px; }
-        dd + dd { margin-top: 20px; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 20px 0 0; width: 100px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 650px; float: right; }
+        dd.clear { float: none; margin: 0; margin-bottom: 20px; height: 15px; }
+        dd + dd { margin-top: 15px; }
         dl img {
           float: right;
           max-width: 100px;
@@ -69,16 +69,53 @@ ga('send', 'pageview');
         </div>
         <div id="objective">
             <p>
-I am a professional software developer, based in San Francisco. While being a
-high school student I won multiple awards in world-class programming
-competitions. I worked in a couple of startups fresh out of school. I
-developed and contributed to a top-10 most-starred project on GitHub.
+I am a professional software developer turned into a full-time student at MIT. I study Computer Science and I have a passion for learning, teaching and Korean Culture.
             </p>
         </div>
         <div class="clear"></div>
         <dl>
+          {{#section id="teaching" name="Teaching Experience"}}
+            {{#subsection name="DynaMIT" extra="Cambridge, MA - August 2016" icon="flask"}}
+[![DynaMIT](/img/dynamit.jpg)](http://mitdynamit.weebly.com/)
+Mentored a group of 40 middle school students in a team of 20 mentors. Students
+were from local schools in Boston area aged 10 to 12 years old.
+
+As part of the 5 day summer camp we taught middle school students sciences,
+basics of mechanics, chemistry, probability, forensics and bio lab experiments.
+All activities included lectures, live demos, hands-on practice experiments and
+games.
+
+The camp was hosted on MIT campus and ran entirely by MIT undergraduate students.
+            {{/subsection}}
+            {{#subsection name="6.148 WebDev Class" extra="Cambridge, MA - January 2016" icon="user"}}
+[![6.148](/img/6148.png)](http://6.148.scripts.mit.edu/2016/)
+6.148 is an MIT student run class about web-development that guides students
+through the process of building a RESTful back-end with a database and a dynamic
+JavaScript front-end using industry proven frameworks (React, Angular, Meteor,
+Express).
+
+The class is approved by MIT to grant technical credit to students taking it.
+Every year it has more than 150 students sign up from MIT and Harvard.
+
+Filled the position of an exec member of a 8-person team as well as a lecturer.
+The responsibilities included building the tech, contributing to the curriculum
+and lecturing.
+            {{/subsection}}
+            {{#subsection name="Algorithms Summer Camp" extra="Almaty, Kazakhstan - 2011-2012" icon="desktop"}}
+![Katev](/img/katev-logo.png)
+Lectured algorithms and advanced data structures to groups of 20-30 high school
+students in Kazakhstan for two summers. Each camp lasted one week and had a
+selected group of students training for algorithmic challenges and competitive
+programming contests.
+
+Besides lectures, we gave homework, also had an online grading system.
+            {{/subsection}}
+          {{/section}}
+        </dl>
+        <div class="clear"></div>
+        <dl>
           {{#section id="work" name="Work Experience"}}
-            {{#subsection name="Meteor Development Group" extra="San Francisco, CA - 2013-2015" icon="briefcase"}}
+            {{#subsection name="Meteor Development Group" extra="San Francisco, CA - 2013-2016" icon="briefcase"}}
 [![Meteor](/img/meteor-logo.png)](https://meteor.com)
 Core Developer. Engineer #5 (employee #9).
 Worked on the main open-source product (Meteor framework) as well as the early
@@ -97,17 +134,6 @@ performance, resulting into orders of magnitude improvements.
 [Isobuild]: https://www.meteor.com/isobuild
 [mobile]: http://info.meteor.com/blog/meteor-092-ios-android-mobile-apps-phonegap-cordova
 [windows]: http://info.meteor.com/blog/meteor-11-microsoft-windows-mongodb-30
-
-Participated in the product discussions. Submitted and worked on multiple
-technical design proposals. Worked with, supported and communicated to the
-development community around the framework. (Examples: [1][1], [2][2], [3][3]).
-
-[1]: https://meteor.hackpad.com/Blaze-lexical-scope-and-template-arguments-fZP806qG6xQ
-[2]: https://meteor.hackpad.com/Proposal-queues-based-build-tool-kbqhWoYYfKR
-[3]: https://meteor.hackpad.com/Proposal-New-phases-for-the-build-process-KQ8jqchouGs
-
-Represented the company on events. Gave various technical talks on meetups and
-conferences. [Details](#talks).
 
 Gained expertise in: JavaScript, node.js, MongoDB, Apache Cordova.
             {{/subsection}}
@@ -132,7 +158,21 @@ Press coverage: [PandoDaily][PD], [TechCrunch][TC], [TheNextWeb][TNW].
 [![MIT logo](img/mit-logo.png)](http://www.mit.edu/)
 
 In 2012 I took three years after high school to work in Silicon Valley startups.
-In 2015 I got admitted to MIT undergraduate program, Course 6.
+In 2015 I got admitted to MIT. At MIT I study Course 6-3 Computer Science and took the following courses:
+
+- 6.01: Intro to EECS
+- 6.004: Computation Structures
+- 6.046: Design and Analysis of Algorithms
+- 6.035: Computer Language Engineering (Compilers)
+- 6.172: Performance Engineering
+- 6.828: Operating System Engineering
+
+As part of the Korean language concentration I took the following classes:
+
+- Korean 1 (Freshman Fall)
+- Korean 2 (Freshman Spring)
+- Korean 3 (Sophomore Fall)
+
             {{/subsection}}
             {{#subsection icon="graduation-cap" name="Kazakh-Turkish Lyceum" extra="Karaganda, Kazakhstan - 2007-2012"}}
 ![Katev logo](img/katev-logo.png)
@@ -141,139 +181,6 @@ In this boys-only boarding school on the edge of my hometown I
 picked up programming, started participating in programming
 competitions and have led two summers of coding camps for younger
 students.
-            {{/subsection}}
-          {{/section}}
-
-          {{#section id="skills" name="Skills and Interests"}}
-            {{#subsection name="Development Tools" icon="terminal"}}
-I worked on web-development frameworks. Contributed to the design of dynamic
-templating language. Worked on a system analyzing MongoDB queries, allowing to
-reduce the load on the database looking for real-time data notifications.
-
-My side projects include: code assist tooling for text-editors, structured
-queries parsers, toy programming languages.
-            {{/subsection}}
-            {{#subsection name="Code Analysis" icon="code"}}
-Have learned OCaml and the theory of compilers from Stanford's [Coursera class
-by Alex Aiken](https://www.coursera.org/course/compilers).
-
-Developed a simple Lisp interpreter. Built a compiler for a toy object-oriented
-programming language (Decaf, part of the Stanford class) and code assist tooling
-for a JavaScript framework.
-            {{/subsection}}
-            {{#subsection name="Distributed Systems" icon="sitemap" extra="interest"}}
-My experience in Distributed Systems is limited but I am eager to learn more and
-get my hands dirty.
-
-Contributed to Galaxy, Meteor's distributed highly available hosting platform.
-
-Have [taken](http://devblog.me/systems-class) MIT's 6.033 online, learned and
-read about [different
-things](http://web.mit.edu/6.033/2014/wwwdocs/schedule.shtml).  {{/subsection}}
-          {{/section}}
-
-          {{#section id="opensource" name="Open Source Software"}}
-            {{#subsection name="meteor/meteor" icon="github" extra="26 260" extraIcon="star"}}
-Being a Core Developer employed by Meteor Development Group, contributed more
-than 1300 patches (currently a top 3 contributor). Shipped major features.
-Maintained older projects. Reviewed submitted pull requests. Managed public
-issue tracker. Worked with the community.
-
-All activity on the issue tracker:
-[search on GitHub](https://github.com/meteor/meteor/issues?utf8=%E2%9C%93&q=commenter%3ASlava).
-
-[Meteor](https://github.com/meteor/meteor) is GitHub's top 10 most popular project of all time.
-            {{/subsection}}
-            {{#subsection name="slava/tern-meteor" icon="github" extra="258" extraIcon="star"}}
-#### [Tern for Meteor](https://github.com/Slava/tern-meteor)
-
-A plugin for text-editors such as Vim, Emacs, Sublime Text and others. This
-plugin provides JavaScript code intellegence tools specific to the Meteor
-framework and its APIs.
-
-#### [Meteor Autocomplete for Sublime](https://github.com/Slava/tern-meteor-sublime)
-
-A Sublime-Text package. Based on the Tern for Meteor, provides code
-intellegence, autocompletion of 3rd party packages, client/server autocompletion
-separation depending on the context. Other features, such as "jump to
-definition" or "go to documentation".
-            {{/subsection}}
-            {{#subsection name="slava/meteor-rethinkdb" icon="github" extra="143" extraIcon="star"}}
-A Meteor integration with [RethinkDB](http://rethinkdb.com), a NoSQL database
-that positions itself as an "open-source database for realtime web".
-
-The integration included an integration of a client-side cache, DDP RPC methods,
-research on the latency compensation options and more.
-
-Available on [GitHub](https://github.com/slava/meteor-rethinkdb).
-            {{/subsection}}
-            {{#subsection name="slava/meteor-gmail" icon="github" extra="42" extraIcon="star"}}
-A Meteor smart package that utilizes GMail API to poll data and provide soft
-real-time notifications when the set of emails matching the query changes.
-
-Includes a parser for the GMail query language to parse messages. An example of
-a query:
-
-`from:me to:(bob OR bob@corp.com) -kittens`.
-            {{/subsection}}
-          {{/section}}
-
-          {{#section id="competitions" name="Competitive Programming"}}
-            {{#subsection name="International Olympiad in Infromatics" extra="2011-2012" icon="trophy"}}
-[![IOI logo](/img/ioi-logo.png)](http://www.ioinformatics.org/)
-
-IOI is an annual algorithmic programming competition for high school students.
-More information at the [Wikipedia page][IOI].
-
-Full statistics is available on the [official IOI site][IOIprofile]:
-
-- Silver Medal in 2012 - Sirmione, Italy
-- Bronze Medal in 2011 - Pattaya, Thailand
-
-[IOIprofile]: http://stats.ioinformatics.org/people/2474
-[IOI]: http://en.wikipedia.org/wiki/International_Olympiad_in_Informatics
-            {{/subsection}}
-
-            {{#subsection name="TopCoder, CodeForces, Online Judges" extra="2010-2012" icon="bar-chart"}}
-![TopCoder logo](img/topcoder-logo.png)
-
-TopCoder and CodeForces are world's most competitive algorithmic platforms. I
-have been active in years of my high school getting high ranks in the first
-division, consistently for several years.
-
-- My TopCoder profile: <a class="topcoder" href="http://community.topcoder.com/tc?module=MemberProfile&cr=22907032">imslavko</a>.
-- My CodeForces profile: <a class="codeforces" href="http://codeforces.com/profile/imslavko">imslavko</a>.
-
-Repository with all solution files on different websites and online judges:
-[repo on GitHub](https://github.com/Slava/competitiveProgramming/) (hundreds of
-solved algorithmic problems).
-            {{/subsection}}
-            {{#subsection name="On-site competitions in Kazakhstan" extra="2009-2012" icon="bar-chart"}}
-For the 3 years of high school I have participated in 15 personal and team
-competitions, always achieving gold and silver medals. A list and a blog in
-Russian available
-[here](https://odscpp.wordpress.com/%D0%BC%D0%BE%D0%B8-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B/).
-
-Coached top 30 students from the whole country for two summers. Developed an
-online course with videos and problem sets in association with the "Daryn" -
-National Scientific Pedagogical Center.
-            {{/subsection}}
-          {{/section}}
-          {{#section id="talks" name="Recorded Talks"}}
-            {{#subsection name="Meteor Devshop Talks" icon="video-camera"}}
-- [Making Windows a first class Meteor development platform](https://www.youtube.com/watch?v=tNoJr_xLgSs) (with Sashko Stubailo)
-- [Meteor for Mobile](https://www.youtube.com/watch?v=4dJLPLWMImw) (with Matt Arbesfeld and Sashko Stubailo)
-- [What does it mean to be a realtime database?](https://www.youtube.com/watch?v=nEjIjJ3TC40)
-- [Don't get bitten by mungos (or Mongos)](https://www.youtube.com/watch?v=amaR4Aqe0s0)
-- [Experimental Redis Support](https://www.youtube.com/watch?v=-Vnb8tjnE3k)
-- [Profiling Blaze](https://www.youtube.com/watch?v=0pO96dEySF0)
-- [Meteor autocompletion for Sublime Text](https://www.youtube.com/watch?v=OxzdNZCxPjk), [Meteor autocompletion](https://www.youtube.com/watch?v=CcPZ56t8x4I)
-            {{/subsection}}
-            {{#subsection name="JSConf 2014" icon="video-camera"}}
-"Reactive Programming Made Simple". A talk on JSConf 2014 in Singapore about a
-subproject of Meteor called [Tracker](https://www.meteor.com/tracker). A video
-recording is available on
-[YouTube](https://www.youtube.com/watch?v=CjzZif7z9SE).
             {{/subsection}}
           {{/section}}
         </dl>
