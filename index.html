@@ -9,11 +9,11 @@
 
      <style type="text/css">
         * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; }
+        body { font: 14px Helvetica, Sans-Serif; line-height: 20px; }
         .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #page-wrap { width: 800px; margin: 20px auto 40px; }
         #pic {
-          height: 260px; width: 200px;
+          max-height: 260px; max-width: 200px;
           border: 10px solid white;
           -webkit-box-shadow: 4px 4px 20px -4px rgba(0,0,0,0.75);
           -moz-box-shadow: 4px 4px 20px -4px rgba(0,0,0,0.75);
@@ -27,18 +27,18 @@
         p { margin: 0 0 16px 0; }
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 32px 17px; }
+        ul { margin-left: 20px; margin-top: 3px; margin-bottom: 5px; }
         #objective { width: 500px; float: left; }
         #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; margin-bottom: 50px; height: 15px; }
-        dd + dd { margin-top: 20px; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 20px 0 0; width: 100px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 650px; float: right; }
+        dd.clear { float: none; margin: 0; margin-bottom: 20px; height: 15px; }
+        dd + dd { margin-top: 15px; }
         dl img {
           float: right;
           max-width: 100px;
           max-height: 100px;
-          margin: 20px;
+          margin: 10px;
         }
         .topcoder { font-weight: bold; color: #DDCC00; }
         .codeforces { font-weight: bold; color: #a0a; }
@@ -69,7 +69,7 @@ ga('send', 'pageview');
 : <a href="https://github.com/Slava">Slava</a> <br>
               <i class="fa fa-twitter"></i>
 
-: <a href="https://twitter.com/imslavko">@imslavko</a> <br>
+: <a href="https://twitter.com/imslavko">imslavko</a> <br>
               <i class="fa fa-home"></i>
 
 : <a href="http://devblog.me">Homepage</a> <br>
@@ -77,10 +77,11 @@ ga('send', 'pageview');
         </div>
         <div id="objective">
             <p>
-I am a professional software developer, based in San Francisco. While being a
-high school student I won multiple awards in world-class programming
-competitions. I worked in a couple of startups fresh out of school. I
-developed and contributed to a top-10 most-starred project on GitHub.
+              Sophomore student at MIT studying Computer Science. Before MIT
+              worked in SF Bay Area startups for three years, full-time.
+              Contributed to top open-source projects and gave numerous talks at
+              JavaScript professional conferences. Before that I went to
+              international programming competitions and represented my home country.
             </p>
         </div>
         <div class="clear"></div>
@@ -92,11 +93,15 @@ developed and contributed to a top-10 most-starred project on GitHub.
             <dd>
   <h2><i class="fa fa-briefcase"></i>
 
- Meteor Development Group <span> San Francisco, CA - 2013-2015</span></h2>
+ Meteor Development Group <span> San Francisco, CA - 2013-2016</span></h2>
   <p><a href="https://meteor.com"><img src="/img/meteor-logo.png" alt="Meteor" title="" /></a>
 Core Developer. Engineer #5 (employee #9).
 Worked on the main open-source product (Meteor framework) as well as the early
 stages of the commercial hosting software (Galaxy).</p>
+
+<p>Most recently, during summer 2016, worked on developing open-source GraphQL
+tools, servers, monitoring and performance products for GraphQL-based
+infrastructure.</p>
 
 <p>Worked on the data synchronization from databases
 (<a href="https://www.meteor.com/livequery">LiveQuery</a>), contributed to the front-end framework
@@ -112,23 +117,6 @@ development community around the framework. (Examples: <a href="https://meteor.h
 
 <p>Represented the company on events. Gave various technical talks on meetups and
 conferences. <a href="#talks">Details</a>.</p>
-
-<p>Gained expertise in: JavaScript, node.js, MongoDB, Apache Cordova.</p>
-</dd>
-
-
-            <dd>
-  <h2><i class="fa fa-briefcase"></i>
-
- Collections Labs <span> Mountain View, CA - 2012-2013</span></h2>
-  <p><a href="https://www.crunchbase.com/organization/collections"><img src="/img/collections-logo.png" alt="Collections" title="" /></a></p>
-
-<p>A junior software engineer in a seed stage startup.</p>
-
-<p>Developed the main product for Mac OS X in Objective-C. Also developed a Windows
-application (prototype in C#, final product in JS/HTML).</p>
-
-<p>Press coverage: <a href="https://pando.com/2012/12/14/yc-grad-collections-me-is-remaking-the-most-basic-part-of-the-os-the-finder/">PandoDaily</a>, <a href="http://techcrunch.com/2012/07/24/collections-for-mac-instagram-google-drive/">TechCrunch</a>, <a href="http://thenextweb.com/apps/2012/08/17/y-combinator-backed-collections-me-syncs-facebook-photos-instagram-google-docs-one-mac-app/">TheNextWeb</a>.</p>
 </dd>
 
 
@@ -144,10 +132,10 @@ application (prototype in C#, final product in JS/HTML).</p>
   <h2><i class="fa fa-university"></i>
 
  Massachusetts Institute of Technology <span> Boston, MA - 2015-2019</span></h2>
-  <p><a href="http://www.mit.edu/"><img src="img/mit-logo.png" alt="MIT logo" title="" /></a></p>
+  <p><a href="http://www.mit.edu/"><img src="img/mit-logo.png" alt="MIT logo" title="" /></a>
+I started MIT in 2015, after taking 3 years gap after high school and after working in startups.</p>
 
-<p>In 2012 I took three years after high school to work in Silicon Valley startups.
-In 2015 I got admitted to MIT undergraduate program, Course 6.</p>
+<p>Relevant course work includes: Algorithms Design and Analysis (6.046), Compilers (6.035), OS (6.828), Computation Structures (6.004).</p>
 </dd>
 
 
@@ -155,12 +143,67 @@ In 2015 I got admitted to MIT undergraduate program, Course 6.</p>
   <h2><i class="fa fa-graduation-cap"></i>
 
  Kazakh-Turkish Lyceum <span> Karaganda, Kazakhstan - 2007-2012</span></h2>
-  <p><img src="img/katev-logo.png" alt="Katev logo" title="" /></p>
-
-<p>In this boys-only boarding school on the edge of my hometown I
+  <p>In this boys-only boarding school on the edge of my hometown I
 picked up programming, started participating in programming
 competitions and have led two summers of coding camps for younger
 students.</p>
+</dd>
+
+
+          
+</div>
+
+
+          <dd class="clear"></dd>
+<dt>Open Source Software</dt>
+<div id="opensource">
+  
+            <dd>
+  <h2><i class="fa fa-github"></i>
+
+ meteor/meteor <span><i class="fa fa-star"></i>
+
+ 35 422</span></h2>
+  <p>Being a Core Developer employed by Meteor Development Group, contributed more
+than 1300 patches (currently a top 3 contributor). Shipped major features.
+Maintained older projects. Reviewed submitted pull requests. Managed public
+issue tracker. Worked with the community.</p>
+
+<p><a href="https://github.com/meteor/meteor">Meteor</a> is GitHub's top 20 most popular project of all time.</p>
+</dd>
+
+
+            <dd>
+  <h2><i class="fa fa-github"></i>
+
+ apollostack/apollo-client <span><i class="fa fa-star"></i>
+
+ 925</span></h2>
+  <h4 id="apolloclienthttpsgithubcomapollostackapolloclient"><a href="https://github.com/apollostack/apollo-client">Apollo Client</a></h4>
+
+<p>Apollo is a caching client for any GraphQL server and UI framework. This is a JS
+framework running in the browser that batches and caches requests to a GraphQL
+server, knows how to normalize the returned data, and maintain a consistent data
+snapshot with a partial knowledge gained from requests to the server. I worked
+on it as part of my internship. I built features like: mutations with
+"Optimistic UI" and cache consistency. Infinite scrolling features and wrote
+numerous blog-posts explaining how it works.</p>
+
+<p>Read these blog-posts to learn more: <a href="https://medium.com/apollo-stack/pagination-and-infinite-scrolling-in-apollo-client-59ff064aac61#.i3drdewvp">Pagination and Infinite Scroll in Apollo</a>, <a href="https://medium.com/apollo-stack/mutations-and-optimistic-ui-in-apollo-client-517eacee8fb0#.e4q7ngb2z">Mutations and Optimistic UI</a>, <a href="https://medium.com/apollo-stack/the-concepts-of-graphql-bc68bd819be3#.ve15grfhc">GraphQL Concepts Visualized</a>.</p>
+</dd>
+
+
+            <dd>
+  <h2><i class="fa fa-github"></i>
+
+ slava/tern-meteor <span><i class="fa fa-star"></i>
+
+ 300</span></h2>
+  <h4 id="ternformeteorhttpsgithubcomslavaternmeteor"><a href="https://github.com/Slava/tern-meteor">Tern for Meteor</a></h4>
+
+<p>A plugin for text-editors such as Vim, Emacs, Sublime Text and others. This
+plugin provides JavaScript code intellegence tools specific to the Meteor
+framework and its APIs.</p>
 </dd>
 
 
@@ -178,9 +221,8 @@ students.</p>
  Development Tools <span> </span></h2>
   <p>I worked on web-development frameworks. Contributed to the design of dynamic
 templating language. Worked on a system analyzing MongoDB queries, allowing to
-reduce the load on the database looking for real-time data notifications.</p>
-
-<p>My side projects include: code assist tooling for text-editors, structured
+reduce the load on the database looking for real-time data notifications.
+My side projects include: code assist tooling for text-editors, structured
 queries parsers, toy programming languages.</p>
 </dd>
 
@@ -188,9 +230,8 @@ queries parsers, toy programming languages.</p>
             <dd>
   <h2><i class="fa fa-code"></i>
 
- Code Analysis <span> </span></h2>
-  <p>Have learned OCaml and the theory of compilers from Stanford's <a href="https://www.coursera.org/course/compilers">Coursera class
-by Alex Aiken</a>.</p>
+ Code Analysis and Compilers <span> </span></h2>
+  <p>As part of the compilers class built a fully working compiler in Haskell that featured: syntax parsing and analysis, code movement optimizations, CSE/DCE/CP optimizations, register allocation and loop parallelization. The compiler was compiling code for Decaf, a toy language similar in semantics to C.</p>
 
 <p>Developed a simple Lisp interpreter. Built a compiler for a toy object-oriented
 programming language (Decaf, part of the Stanford class) and code assist tooling
@@ -199,101 +240,19 @@ for a JavaScript framework.</p>
 
 
             <dd>
-  <h2><i class="fa fa-sitemap"></i>
+  <h2><i class="fa fa-cogs"></i>
 
- Distributed Systems <span> interest</span></h2>
-  <p>My experience in Distributed Systems is limited but I am eager to learn more and
-get my hands dirty.</p>
+ Technologies <span> </span></h2>
+  <p>Proficient and have experience with the following technologies: C/C++, JavaScript, OCaml, Haskell, Java, Objective-C, PostgreSQL, React, GraphQL, MongoDB.</p>
 
-<p>Contributed to Galaxy, Meteor's distributed highly available hosting platform.</p>
-
-<p>Have <a href="http://devblog.me/systems-class">taken</a> MIT's 6.033 online, learned and
-read about <a href="http://web.mit.edu/6.033/2014/wwwdocs/schedule.shtml">different
-things</a>.  </p>
+<p>Interested in Systems Engineering and Security.</p>
 </dd>
+
 
 
           
 </div>
 
-
-          <dd class="clear"></dd>
-<dt>Open Source Software</dt>
-<div id="opensource">
-  
-            <dd>
-  <h2><i class="fa fa-github"></i>
-
- meteor/meteor <span><i class="fa fa-star"></i>
-
- 26 260</span></h2>
-  <p>Being a Core Developer employed by Meteor Development Group, contributed more
-than 1300 patches (currently a top 3 contributor). Shipped major features.
-Maintained older projects. Reviewed submitted pull requests. Managed public
-issue tracker. Worked with the community.</p>
-
-<p>All activity on the issue tracker:
-<a href="https://github.com/meteor/meteor/issues?utf8=%E2%9C%93&amp;q=commenter%3ASlava">search on GitHub</a>.</p>
-
-<p><a href="https://github.com/meteor/meteor">Meteor</a> is GitHub's top 10 most popular project of all time.</p>
-</dd>
-
-
-            <dd>
-  <h2><i class="fa fa-github"></i>
-
- slava/tern-meteor <span><i class="fa fa-star"></i>
-
- 258</span></h2>
-  <h4 id="ternformeteorhttpsgithubcomslavaternmeteor"><a href="https://github.com/Slava/tern-meteor">Tern for Meteor</a></h4>
-
-<p>A plugin for text-editors such as Vim, Emacs, Sublime Text and others. This
-plugin provides JavaScript code intellegence tools specific to the Meteor
-framework and its APIs.</p>
-
-<h4 id="meteorautocompleteforsublimehttpsgithubcomslavaternmeteorsublime"><a href="https://github.com/Slava/tern-meteor-sublime">Meteor Autocomplete for Sublime</a></h4>
-
-<p>A Sublime-Text package. Based on the Tern for Meteor, provides code
-intellegence, autocompletion of 3rd party packages, client/server autocompletion
-separation depending on the context. Other features, such as "jump to
-definition" or "go to documentation".</p>
-</dd>
-
-
-            <dd>
-  <h2><i class="fa fa-github"></i>
-
- slava/meteor-rethinkdb <span><i class="fa fa-star"></i>
-
- 143</span></h2>
-  <p>A Meteor integration with <a href="http://rethinkdb.com">RethinkDB</a>, a NoSQL database
-that positions itself as an "open-source database for realtime web".</p>
-
-<p>The integration included an integration of a client-side cache, DDP RPC methods,
-research on the latency compensation options and more.</p>
-
-<p>Available on <a href="https://github.com/slava/meteor-rethinkdb">GitHub</a>.</p>
-</dd>
-
-
-            <dd>
-  <h2><i class="fa fa-github"></i>
-
- slava/meteor-gmail <span><i class="fa fa-star"></i>
-
- 42</span></h2>
-  <p>A Meteor smart package that utilizes GMail API to poll data and provide soft
-real-time notifications when the set of emails matching the query changes.</p>
-
-<p>Includes a parser for the GMail query language to parse messages. An example of
-a query:</p>
-
-<p><code>from:me to:(bob OR bob@corp.com) -kittens</code>.</p>
-</dd>
-
-
-          
-</div>
 
 
           <dd class="clear"></dd>
@@ -303,13 +262,12 @@ a query:</p>
             <dd>
   <h2><i class="fa fa-trophy"></i>
 
- International Olympiad in Infromatics <span> 2011-2012</span></h2>
+ International Olympiad in Informatics <span> 2011-2012</span></h2>
   <p><a href="http://www.ioinformatics.org/"><img src="/img/ioi-logo.png" alt="IOI logo" title="" /></a></p>
 
 <p>IOI is an annual algorithmic programming competition for high school students.
-More information at the <a href="http://en.wikipedia.org/wiki/International_Olympiad_in_Informatics">Wikipedia page</a>.</p>
-
-<p>Full statistics is available on the <a href="http://stats.ioinformatics.org/people/2474">official IOI site</a>:</p>
+More information at the <a href="http://en.wikipedia.org/wiki/International_Olympiad_in_Informatics">Wikipedia page</a>.
+Full statistics is available on the <a href="http://stats.ioinformatics.org/people/2474">official IOI site</a>:</p>
 
 <ul>
 <li>Silver Medal in 2012 - Sirmione, Italy</li>
@@ -333,25 +291,6 @@ division, consistently for several years.</p>
 <li>My TopCoder profile: <a class="topcoder" href="http://community.topcoder.com/tc?module=MemberProfile&amp;cr=22907032">imslavko</a>.</li>
 <li>My CodeForces profile: <a class="codeforces" href="http://codeforces.com/profile/imslavko">imslavko</a>.</li>
 </ul>
-
-<p>Repository with all solution files on different websites and online judges:
-<a href="https://github.com/Slava/competitiveProgramming/">repo on GitHub</a> (hundreds of
-solved algorithmic problems).</p>
-</dd>
-
-
-            <dd>
-  <h2><i class="fa fa-bar-chart"></i>
-
- On-site competitions in Kazakhstan <span> 2009-2012</span></h2>
-  <p>For the 3 years of high school I have participated in 15 personal and team
-competitions, always achieving gold and silver medals. A list and a blog in
-Russian available
-<a href="https://odscpp.wordpress.com/%D0%BC%D0%BE%D0%B8-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B/">here</a>.</p>
-
-<p>Coached top 30 students from the whole country for two summers. Developed an
-online course with videos and problem sets in association with the "Daryn" -
-National Scientific Pedagogical Center.</p>
 </dd>
 
 
