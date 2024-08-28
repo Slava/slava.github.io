@@ -99,10 +99,7 @@
                     Deep dive: Keeping Figma Fast
                 </a>
             </p>
-            <button class="text-blue-600 hover:underline mb-4 hidden" onclick="toggleDetails('editor-performance-details')">
-                Key Accomplishments
-            </button>
-            <div id="editor-performance-details" class="hidden">
+            <div id="editor-performance-details" class="bullets">
                 <ul class="list-disc pl-5 space-y-2">
                     <li>Prevented dozens of performance regressions monthly through the testing framework, including 10+ critical regressions that would have significantly degraded the Figma editor's performance in production</li>
                     <li>Enhanced and extended Figma's existing testing framework to create a robust performance testing system, enabling automated detection of performance regressions across the product</li>
@@ -141,10 +138,7 @@
                     Deep dive: LiveGraph: Real-time data fetching at Figma
                 </a>
             </p>
-            <button class="text-blue-600 hover:underline mb-4 hidden" onclick="toggleDetails('livegraph-details')">
-                Key Accomplishments
-            </button>
-            <div id="livegraph-details" class="hidden">
+            <div id="livegraph-details" class="bullets">
                 <ul class="list-disc pl-5 space-y-2">
                     <li>Drove the architecture and development of LiveGraph from concept to large-scale production deployment, writing substantial portions of the codebase</li>
                     <li>Designed and implemented core components including the query engine, real-time update mechanism, subscription management system, and LiveQuery subservice for improved scalability</li>
@@ -349,6 +343,25 @@
                         document.getElementById("awards-content").innerHTML;
                     document.getElementById("overview-links").innerHTML =
                         document.getElementById("links-content").innerHTML;
+
+                    const experienceButton = () => {
+                      const button = document.createElement("button");
+                      button.textContent = "see more...";
+                      button.className = "text-blue-600 hover:underline mt-4";
+                      button.onclick = () => showPage('experience');
+                      return button;
+                    }
+
+                    document.getElementById("editor-performance-details").appendChild(experienceButton());
+                    document.getElementById("livegraph-details").appendChild(experienceButton());
+
+                    // Remove all but the first 2 bullet points from lists with class "bullets"
+                    document.querySelectorAll('#overview-figma .bullets ul').forEach(list => {
+                        const items = list.querySelectorAll('li');
+                        for (let i = 2; i < items.length; i++) {
+                            items[i].remove();
+                        }
+                    });
                 } else if (pageName === "experience") {
                   document.getElementById("experience-figma").innerHTML =
                       document.getElementById("figma-content").innerHTML;
