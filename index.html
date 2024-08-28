@@ -46,9 +46,9 @@
                     <li class="flex-1">
                         <button
                             class="w-full py-2"
-                            onclick="showPage('education')"
+                            onclick="showPage('projects')"
                         >
-                            Education
+                            Projects
                         </button>
                     </li>
                     <li class="flex-1">
@@ -69,7 +69,7 @@
         <div id="figma-content" class="hidden">
             <h2 class="text-2xl font-bold mb-2">Figma</h2>
             <p class="text-sm text-gray-600 mb-4">
-                2019 - 2024 | San Francisco, CA
+                Apr 2019 - Jun 2024 | San Francisco, CA
             </p>
 
             <h3 class="text-xl font-semibold mt-4 mb-2">Editor Performance</h3>
@@ -167,6 +167,16 @@
                     <tr><td>TopCoder</td><td><a href="https://www.topcoder.com/members/imslavko/details/?track=DATA_SCIENCE&amp;subTrack=SRM">imslavko</a></td></tr>
                     <tr><td>Twitter</td><td><a href="https://twitter.com/imslavko">@imslavko</a></td></tr>
                     <tr><td>Blog</td><td><a href="https://devblog.me">devblog.me</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="awards-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-2">Awards</h2>
+            <table>
+                <tbody>
+                    <tr><td>IOI 2012</td><td>Silver Medal</td></tr>
+                    <tr><td>IOI 2011</td><td>Bronze Medal</td></tr>
                 </tbody>
             </table>
         </div>
@@ -306,7 +316,8 @@
             <div class="flex">
                 <div class="w-1/3 pr-4">
                     <div id="overview-mit" class="mb-8"></div>
-                    <div id="overview-links"></div>
+                    <div id="overview-links" class="mb-8"></div>
+                    <div id="overview-awards" class="mb-8"></div>
                 </div>
                 <div id="overview-figma" class="w-2/3"></div>
             </div>
@@ -334,6 +345,8 @@
                         document.getElementById("figma-content").innerHTML;
                     document.getElementById("overview-mit").innerHTML =
                         document.getElementById("mit-content").innerHTML;
+                    document.getElementById("overview-awards").innerHTML =
+                        document.getElementById("awards-content").innerHTML;
                     document.getElementById("overview-links").innerHTML =
                         document.getElementById("links-content").innerHTML;
                 } else if (pageName === "experience") {
@@ -351,6 +364,13 @@
                   document.querySelectorAll('#experience-figma button.hidden').forEach(button => {
                       button.classList.remove('hidden');
                   });
+                } else if (pageName === "projects") {
+                  document.getElementById("projects-meteor").innerHTML =
+                      document.getElementById("meteor-projects-content").innerHTML;
+                  document.getElementById("projects-labeltool").innerHTML =
+                      document.getElementById("labeltool-content").innerHTML;
+                  document.getElementById("projects-figma").innerHTML =
+                      document.getElementById("figma-projects-content").innerHTML;
                 }
 
                 // Update active nav button
