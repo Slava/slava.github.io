@@ -1,369 +1,344 @@
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Slava Kim. Software Engineer. Resume.">
-    <link rel="author" href="https://plus.google.com/+SlavaKim">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slava Kim</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="font-sans bg-white text-gray-900">
+        <div class="max-w-5xl mx-auto p-6">
+            <header class="mb-8">
+                <h1 class="text-4xl font-bold mb-2">Slava Kim</h1>
+                <div class="flex items-center text-gray-600">
+                    <span class="mr-4">hi@slv.io</span>
+                    <span class="mr-4">slv.io</span>
+                    <span>SF, CA</span>
+                </div>
+            </header>
 
-    <title>Slava Kim - Resume</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+            <nav class="mb-8">
+                <ul class="flex border rounded-lg overflow-hidden">
+                    <li class="flex-1">
+                        <button
+                            class="w-full py-2 bg-gray-100"
+                            onclick="showPage('overview')"
+                        >
+                            Overview
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        <button
+                            class="w-full py-2"
+                            onclick="showPage('experience')"
+                        >
+                            Experience
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        <button
+                            class="w-full py-2"
+                            onclick="showPage('education')"
+                        >
+                            Education
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        <button
+                            class="w-full py-2"
+                            onclick="showPage('contracting')"
+                        >
+                            Contracting
+                        </button>
+                    </li>
+                </ul>
+            </nav>
 
-    <script type="text/javascript">
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-     ga('create', 'UA-46840399-1', 'slv.io');
-     ga('send', 'pageview');
-    </script>
+            <div id="content"></div>
+        </div>
 
-    <style>
-     body {
-         padding-left: 1em;
-         padding-right: 1em;
-     }
-     #resume {
-         max-width: 65em;
-         margin: 1em auto;
-         font-family: 'Roboto', sans-serif;
-         font-weight: 100;
-     }
+        <!-- Reusable content blocks -->
+        <div id="figma-content" class="hidden">
+            <h2 class="text-xl font-bold mb-2">Figma</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                2019 - 2024 | San Francisco, CA
+            </p>
 
-     body, a {
-         color: #222;
-     }
+            <h3 class="text-lg font-semibold mt-4 mb-2">Editor Performance</h3>
+            <p class="mb-4">
+                As a staff engineer, I spearheaded the company's performance
+                observability efforts, significantly elevating the quality bar
+                across the entire product. I architected two crucial systems: a
+                comprehensive performance testing framework integrated into
+                Figma's CI process, and an RCA dashboard leveraging production
+                performance data.
+            </p>
+            <p class="mb-4">
+                These tools became instrumental in maintaining high performance
+                standards and quickly identifying regressions. By driving
+                adoption across teams, mentoring engineers, and collaborating
+                with leadership, I fostered a performance-oriented culture that
+                transformed how Figma approached software quality and user
+                experience.
+            </p>
+            <p class="mb-4">
+                <a
+                    href="https://www.figma.com/blog/keeping-figma-fast/"
+                    class="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Deep dive: Keeping Figma Fast
+                </a>
+            </p>
 
-     a {
-         text-decoration: none;
-         font-weight: 300;
-     }
+            <h3 class="text-lg font-semibold mt-4 mb-2">LiveGraph</h3>
+            <p class="mb-4">
+                As a key contributor to LiveGraph for over 3 years, I played a
+                crucial role in transforming Figma's real-time data
+                infrastructure. I was deeply involved in both the day-to-day
+                coding and high-level architectural decisions, helping evolve
+                LiveGraph from a prototype into a production-ready system that
+                now powers many of Figma's real-time features, serving tens of
+                millions of users daily.
+            </p>
+            <p class="mb-4">
+                My work encompassed hands-on development, technical leadership,
+                architectural decision-making, and fostering team growth,
+                significantly impacting Figma's ability to deliver real-time
+                collaboration at scale.
+            </p>
+            <p class="mb-4">
+                <a
+                    href="https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/"
+                    class="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Deep dive: LiveGraph: Real-time data fetching at Figma
+                </a>
+            </p>
+        </div>
 
-     header {
-         width: 30em;
-         margin: 0 auto;
-         text-align: center;
+        <div id="mit-content" class="hidden">
+            <h2 class="text-xl font-bold mb-2">MIT</h2>
+            <p class="text-sm text-gray-600 mb-2">2015-2019 | Cambridge, MA</p>
+            <p class="mb-4">Bachelors in Computer Science</p>
+            <p>
+                My studies at MIT focused on systems programming, distributed
+                computing, and software engineering. I delved deep into areas
+                such as compiler design, operating systems, database management,
+                and system security, gaining a strong foundation in both
+                theoretical concepts and practical implementation of complex
+                software systems.
+            </p>
+        </div>
 
-         border-bottom: solid 2px #ddd;
-         margin-bottom: 2em;
-     }
+        <div id="meteor-content" class="hidden">
+            <h3 class="text-xl font-bold mb-2">Meteor</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                May 2013 - Aug 2015 | San Francisco, CA
+            </p>
+            <p class="mb-4">
+                Meteor is an open-source platform for building web and mobile
+                applications using JavaScript. It provides a full-stack solution
+                that integrates with MongoDB and includes real-time data
+                synchronization out of the box. The company behind Meteor later
+                became Apollo GraphQL.
+            </p>
+            <p class="mb-4">
+                As one of the first 10 engineers in the company, I worked on
+                every part of the framework: datasync, build system, live
+                templating, and deployments. The project garnered 40,000 stars
+                on GitHub, and I was the top 4 contributor.
+            </p>
+            <p>
+                <a
+                    href="https://github.com/meteor/meteor"
+                    class="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Meteor on GitHub
+                </a>
+            </p>
+        </div>
 
-     header ul {
-         list-style: none;
-         padding-left: 0;
-         margin-top: 0.3em;
-         margin-bottom: 1.5em;
-     }
-
-     header ul li {
-         display: inline;
-         margin-right: 1em;
-     }
-
-     header ul li a {
-         font-family: 'Open Sans', sans-serif;
-         text-decoration: none;
-         font-weight: 500;
-         color: #999;
-     }
-
-     h1 {
-         font-size: 4em;
-         font-weight: 100;
-         margin-bottom: 0;
-     }
-
-     h1 em {
-         font-weight: 400;
-         font-style: normal;
-     }
-
-     article {
-         display: flex;
-     }
-     aside {flex: 1;}
-     main {flex: 2;}
-     aside, main {
-         padding-left: 1em;
-         padding-right: 0.5em;
-     }
-
-     h2 {
-         text-transform: uppercase;
-         font-weight: 100;
-         font-size: 1.8em;
-         color: #888;
-         margin: 0;
-     }
-
-     h3 {
-         font-family: 'Open Sans', sans-serif;
-         text-transform: uppercase;
-         font-weight: 600;
-         font-size: 1.5em;
-         color: #333;
-         margin: 0;
-     }
-
-     h3 summary {
-         display: inline;
-         font-size: 0.7em;
-         font-weight: 300;
-         color: #777;
-     }
-
-     section {
-         margin-top: 1.5em;
-         margin-bottom: 1em;
-     }
-
-     info {
-         font-family: 'Open Sans', sans-serif;
-         font-weight: 600;
-         color: #888;
-     }
-
-     info span:first-child::after {
-         content: '|';
-         margin-left: 0.1em;
-     }
-
-     p {
-         margin-top: 0.3em;
-         margin-bottom: 0.3em;
-     }
-
-     aside ul {
-         list-style-type: none;
-         padding-left: 0.6em;
-         margin-top: 0.7em;
-     }
-
-     table {
-         margin-top: 1em;
-     }
-
-     table td {
-         padding-left: 1em;
-         color: #222;
-         font-weight: 100;
-     }
-
-     main li {
-         margin-top: 0.2em;
-     }
-     main ul {
-         padding-left: 1em;
-     }
-
-     .stars {
-         font-weight: 300;
-     }
-     .stars::before {
-         content: '⭐';
-         margin-right: -3px;
-         margin-left: 3px;
-     }
-    </style>
-</head>
-<body>
-    <div id="resume">
-        <header>
-            <h1><em>Slava</em> Kim</h1>
-            <ul>
-                <li><a href="mailto:slv@alum.mit.edu">slv@alum.mit.edu</a></li>
-                <li><a href="http://slv.io">slv.io</a></li>
-                <li><a href="#">USA</a></li>
-            </ul>
-        </header>
-        <article>
-            <aside>
-                <section>
-                    <h2>Education</h2>
-                    <h3>MIT</h3>
-                    <info>
-                        <span>2015-2019</span>
-                        <span>Cambridge, MA</span>
-                    </info>
-                    <p>Bachelors in Computer Science</p>
-                    <p>Selected Coursework:</p>
-                    <ul>
-                        <li>Compilers Eng</li>
-                        <li>Distributed Systems</li>
-                        <li>Operating Systems</li>
-                        <li>Database Systems</li>
-                        <li>System Security</li>
-                        <li>Systems Eng</li>
-                        <li>Performance Eng</li>
-                        <li>Adv Datastructures</li>
-                        <li>Design and Analysis of Algorithms</li>
-                        <li>Computational Photography</li>
-                        <li>Advanced Machine Learning</li>
+        <div id="internships-content" class="hidden">
+            <h3 class="text-xl font-bold mb-2">Internships</h3>
+            <div class="mb-4">
+                <p class="font-semibold">
+                    Brave <span class="text-sm text-gray-600 font-normal">Summer 2018</span>
+                    <span
+                        class="text-gray-400 cursor-pointer"
+                        onclick="toggleDetails('brave-details')"
+                    >
+                        [+]
+                    </span>
+                </p>
+                <div id="brave-details" class="pl-5 mt-2 hidden">
+                    <p>Security Intern</p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Fixed security and privacy bugs in the Brave Browser
+                        </li>
+                        <li>
+                            Developed a new micro-service for authorized
+                            anonymous operations
+                        </li>
+                        <li>
+                            Built an Ethereum wallet integration and dApps
+                            support for the Brave Browser
+                        </li>
+                        <li>
+                            Mentored by Yan Zhu, Brave's Chief Security Officer
+                        </li>
                     </ul>
-                </section>
-                <section>
-                    <h2>Expertise</h2>
-                    <h3>Areas Of Interest</h3>
-                    <ul>
-                        <li>Distributed Systems</li>
-                        <li>Web Technologies</li>
-                        <li>System Security</li>
-                        <li>Image Processing</li>
-                        <li>Compilers</li>
-                        <li>Open-Source Software</li>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p class="font-semibold">
+                    Facebook
+                    <span class="text-sm text-gray-600 font-normal">Summer 2017</span>
+                    <span
+                        class="text-gray-400 cursor-pointer"
+                        onclick="toggleDetails('facebook-details')"
+                    >
+                        [+]
+                    </span>
+                </p>
+                <div id="facebook-details" class="pl-5 mt-2 hidden">
+                    <p>Software Engineering Intern</p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Worked on GraphQL client infrastructure: Relay,
+                            GraphQL compiler
+                        </li>
+                        <li>
+                            Developed a new open-source debugging tool: Relay
+                            Developer Tools
+                        </li>
+                        <li>
+                            Mentored by Lee Byron, GraphQL co-author and
+                            open-source maintainer of GraphQL projects
+                        </li>
                     </ul>
-                    <h3>Technologies Used</h3>
-                    <ul>
-                        <li>Golang • Typescript • C++</li>
-                        <li>Zookeeper • Redis • 0MQ</li>
-                        <li>GraphQL • PostgreSQL • HBase</li>
-                        <li>Docker • Kubernetes • AWS • Heroku</li>
-                        <li>React • Redux • Relay • Apollo</li>
-                        <li>Git • Mercurial • GitHub • Phabricator</li>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p class="font-semibold">
+                    NCSOFT
+                    <span class="text-sm text-gray-600 font-normal">Winter 2019</span>
+                    <span
+                        class="text-gray-400 cursor-pointer"
+                        onclick="toggleDetails('ncsoft-details')"
+                    >
+                        [+]
+                    </span>
+                </p>
+                <div id="ncsoft-details" class="pl-5 mt-2 hidden">
+                    <p>ML Intern</p>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Developed a tool for labeling images and CV data
+                            collection: Label Tool [300+ stars]
+                        </li>
                     </ul>
-                </section>
-                <section>
-                    <h2>Links</h2>
-                    <table>
-                        <tr><td>Github</td><td><a href="https://github.com/Slava">Slava</a></td></tr>
-                        <tr><td>Codeforces</td><td><a href="https://codeforces.com/profile/imslavko">imslavko</a></td></tr>
-                        <tr><td>TopCoder</td><td><a href="https://www.topcoder.com/members/imslavko/details/?track=DATA_SCIENCE&subTrack=SRM">imslavko</a></td></tr>
-                        <tr><td>Twitter</td><td><a href="https://twitter.com/imslavko">@imslavko</a></td></tr>
-                        <tr><td>Blog</td><td><a href="https://devblog.me">devblog.me</a></td></tr>
-                    </table>
-                </section>
-            </aside>
-            <main>
-                <section>
-                    <h2>Work Experience</h2>
-                    <section>
-                        <h3>Figma <summary>Software Engineer</summary></h3>
-                        <info>
-                            <span>2019 - 2024</span>
-                            <span>United States</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Core contributor to <a href="https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/">LiveGraph</a>, Figma's internal auto-realtime GraphQL system, taking it from a prototype to production 2019-2022</li>
-                                <li>Performance observability, monitoring and CI systems for the <a href="https://www.figma.com/blog/webassembly-cut-figmas-load-time-by-3x/">Figma Editor</a> and frontend systems</li>
-                            </ul>
-                        </summary>
-                    </section>
-                    <section>
-                        <h3>NCSOFT <summary>ML Intern</summary></h3>
-                        <info>
-                            <span>Winter 2019</span>
-                            <span>Pangyo, South Korea</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Developed a tool for labeling images and CV data collection: <a href="https://github.com/Slava/label-tool">Label Tool<span class="stars">300+ stars</span></a> </li>
-                            </ul>
-                        </summary>
-                    </section>
-                    <section>
-                        <h3>Brave <summary>Security Intern</summary></h3>
-                        <info>
-                            <span>Summer 2018</span>
-                            <span>San Francisco, CA</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Fixed security and privacy bugs in the Brave Browser</li>
-                                <li>Developed a new micro-service for <a href="https://github.com/brave-intl/challenge-bypass-server">authorized anonymous operations</a></li>
-                                <li>Built an Ethereum wallet integration and dApps support for the Brave Browser</li>
-                                <li>Mentored by Yan Zhu, Brave's Chief Security Officer</li>
-                            </ul>
-                        </summary>
-                    </section>
-                    <section>
-                        <h3>Facebook <summary>SWE Intern</summary></h3>
-                        <info>
-                            <span>Summer 2017</span>
-                            <span>Menlo Park, CA</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Worked on GraphQL client infrastructure: Relay, GraphQL compiler</li>
-                                <li>Developed a new open-source debugging tool: <a href="https://github.com/relayjs/relay-devtools">Relay Developer Tools</a></li>
-                                <li>Mentored by Lee Byron, GraphQL co-author and open-source maintainer of GraphQL projects</li>
-                            </ul>
-                        </summary>
-                    </section>
-                    <section>
-                        <h3>Meteor <summary>SWE Intern</summary></h3>
-                        <info>
-                            <span>Summer 2016</span>
-                            <span>San Francisco, CA</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Built major features for open-source GraphQL client: <a href="https://github.com/apollographql/apollo-client">Apollo Client</a></li>
-                                <li>Worked on the commercial product <a href="https://www.apollographql.com/engine">Optics: out of query path profiler for GraphQL</a></li>
-                            </ul>
-                        </summary>
-                    </section>
-                    <section>
-                        <h3>Meteor <summary>Core Developer</summary></h3>
-                        <info>
-                            <span>May 2013 - Aug 2015</span>
-                            <span>San Francisco, CA</span>
-                        </info>
-                        <summary>
-                            <ul>
-                                <li>Core Developer on the very popular open-source web framework Meteor</li>
-                                <li>One of the first 10 engineers in the company</li>
-                                <li>40.000 stars on GitHub, top 4 contributor</li>
-                                <li>Worked on every part of the framework: datasync, buildsystem, live templating, deployments</li>
-                                <li>Contributed to the development of distributed fault-tolerant deployment system: <a href="https://galaxy.meteor.com">Galaxy</a></li>
-                            </ul>
-                        </summary>
-                    </section>
-                </section>
-                <section>
-                    <h2>Open-Source & Side-Projects</h2>
-                    <section>
-                        <h3>Meteor <summary>and related projects</small></h3>
-                        <ul>
-                            <li>Meteor the framework <a href="https://github.com/meteor/meteor"><span class="stars">43.000+ stars</span></a></li>
-                            <li>Meteor autocompletion for text editors <a href="https://github.com/Slava/tern-meteor"><span class="stars">300 stars</span></a></li>
-                            <li>Meteor live-updates with RethinkDB <a href="https://github.com/Slava/meteor-rethinkdb"><span class="stars">312 stars</span></a></li>
-                            <li>Meteor live-updates with PostgreSQL <a href="https://github.com/meteor/postgres-packages"><span class="stars">155 stars</span></a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>GraphQL <summary>and related projects</small></h3>
-                        <ul>
-                            <li>Apollo Client <a href="https://github.com/apollographql/apollo-client"><span class="stars">18.000+ stars</span></a></li>
-                            <li>Relay <a href="https://github.com/facebook/relay"><span class="stars">17.000+ stars</span></a></li>
-                            <li>Relay DevTools <a href="https://github.com/relayjs/relay-devtools"><span class="stars">140 stars</span></a></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Brave <summary>and related projects</small></h3>
-                        <ul>
-                            <li>Brave Browser <a href="https://github.com/brave/browser-laptop"><span class="stars">8.200 stars</span></a></li>
-                        </ul>
-                    </section>
-                </section>
-                <section>
-                    <h2>Awards</h2>
-                    <table>
-                        <tr><td>2014</td><td>Hackathon Winner</td><td>ChimeHack</td></tr>
-                        <tr><td>2012</td><td>Silver Medalist</td><td>International Olympiad in Informatics</td></tr>
-                        <tr><td>2011</td><td>Bronze Medalist</td><td>International Olympiad in Informatics</td></tr>
-                    </table>
-                </section>
-                <section>
-                    <h2>Activities</h2>
-                    <table>
-                        <tr><td><a href="http://webdevelopment.mit.edu/">MIT 6.148</a></td><td>Lecturer, Sponsors Chair, Tech Chair</td></tr>
-                        <tr><td><a href="http://climbing.mit.edu">MIT Climbing Team</a></td><td>Member, Competitor</td></tr>
-                        <tr><td><a href="http://ats.mit.edu">MIT ATS</a></td><td>Web-Master</td></tr>
-                        <tr><td><a href="http://ksa.mit.edu">MIT KSA</a></td><td>Web-Master</td></tr>
-                        <tr><td><a href="http://zbt.mit.edu">MIT ZBT</a></td><td>Tech Chair</td></tr>
-                    </table>
-                </section>
-            </main>
-        </article>
-        <footer></footer>
-    </div>
-</body>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Hidden content blocks -->
+        <div id="overview-content" class="hidden">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="col-span-2 row-span-2" id="overview-figma"></div>
+                <div id="overview-mit"></div>
+                <div id="overview-meteor"></div>
+            </div>
+        </div>
+
+        <div id="experience-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-6">Experience</h2>
+
+            <div class="mb-8" id="experience-figma"></div>
+
+            <div class="mb-8" id="experience-meteor"></div>
+
+            <div id="experience-internships"></div>
+        </div>
+
+        <script>
+            function showPage(pageName) {
+                const content = document.getElementById("content");
+                const pageContent = document.getElementById(
+                    `${pageName}-content`,
+                );
+                content.innerHTML = pageContent.innerHTML;
+
+                if (pageName === "overview") {
+                    document.getElementById("overview-figma").innerHTML =
+                        document.getElementById("figma-content").innerHTML;
+                    document.getElementById("overview-mit").innerHTML =
+                        document.getElementById("mit-content").innerHTML;
+                    document.getElementById("overview-meteor").innerHTML =
+                        document.getElementById("meteor-content").innerHTML;
+                } else if (pageName === "experience") {
+                    document.getElementById("experience-figma").innerHTML =
+                        document.getElementById("figma-content").innerHTML;
+                    document.getElementById("experience-meteor").innerHTML =
+                        document.getElementById("meteor-content").innerHTML;
+                    document.getElementById(
+                        "experience-internships",
+                    ).innerHTML = document.getElementById(
+                        "internships-content",
+                    ).innerHTML;
+
+                    // Add "View details" buttons for Figma sections
+                    addViewDetailsButton("editor-performance-details");
+                    addViewDetailsButton("livegraph-details");
+                }
+
+                // Update active nav button
+                document.querySelectorAll("nav button").forEach((btn) => {
+                    btn.classList.remove("bg-gray-100");
+                });
+                document
+                    .querySelector(`button[onclick="showPage('${pageName}')"]`)
+                    .classList.add("bg-gray-100");
+
+                // Force a re-paint to ensure Tailwind classes are applied
+                document.body.classList.remove("font-sans");
+                void document.body.offsetWidth;
+                document.body.classList.add("font-sans");
+            }
+
+            function addViewDetailsButton(id) {
+                const detailsElement = document.getElementById(id);
+                if (detailsElement) {
+                    const button = document.createElement("button");
+                    button.className = "text-blue-600 hover:underline mb-4";
+                    button.textContent = "View details";
+                    button.onclick = () => toggleDetails(id);
+                    detailsElement.parentNode.insertBefore(
+                        button,
+                        detailsElement,
+                    );
+                }
+            }
+
+            function toggleDetails(id) {
+                const details = document.getElementById(id);
+                details.classList.toggle("hidden");
+            }
+
+            // Show overview page by default
+            showPage("overview");
+        </script>
+    </body>
+</html>
