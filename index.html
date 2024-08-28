@@ -96,6 +96,21 @@
                     Deep dive: Keeping Figma Fast
                 </a>
             </p>
+            <button class="text-blue-600 hover:underline mb-4 hidden" onclick="toggleDetails('editor-performance-details')">
+                Key Accomplishments
+            </button>
+            <div id="editor-performance-details" class="hidden">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Prevented dozens of performance regressions monthly through the testing framework, including 10+ critical regressions that would have significantly degraded the Figma editor's performance in production</li>
+                    <li>Enhanced and extended Figma's existing testing framework to create a robust performance testing system, enabling automated detection of performance regressions across the product</li>
+                    <li>Developed an RCA (Root Cause Analysis) dashboard based on production performance measurements, collaborating with the data science team to attribute performance regressions to specific feature flags</li>
+                    <li>Deeply integrated the performance framework into Figma's CI process, implementing tests that run on VMs for every commit and on dedicated test laptops nightly</li>
+                    <li>Drove adoption of the performance testing framework across 8+ teams, resulting in 70+ new performance tests in 6 months</li>
+                    <li>Designed and implemented a comprehensive performance infrastructure ecosystem, including device farms, CI optimizations, documentation, guardrails, and oncall processes, to support Figma's growing performance needs</li>
+                    <li>Established and supported a cross-functional group of performance experts through "FastFigs" meetings, Performance Area of Responsibility (AoR) programs, and extensive 1:1 coaching on performance tooling and best practices</li>
+                    <li>Drove cultural change across Figma's engineering organization by mentoring junior engineers, scaling performance expertise, and working closely with leadership to make performance a key consideration in all engineering processes</li>
+                </ul>
+            </div>
 
             <h3 class="text-lg font-semibold mt-4 mb-2">LiveGraph</h3>
             <p class="mb-4">
@@ -123,6 +138,21 @@
                     Deep dive: LiveGraph: Real-time data fetching at Figma
                 </a>
             </p>
+            <button class="text-blue-600 hover:underline mb-4 hidden" onclick="toggleDetails('livegraph-details')">
+                Key Accomplishments
+            </button>
+            <div id="livegraph-details" class="hidden">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Drove the architecture and development of LiveGraph from concept to large-scale production deployment, writing substantial portions of the codebase</li>
+                    <li>Designed and implemented core components including the query engine, real-time update mechanism, subscription management system, and LiveQuery subservice for improved scalability</li>
+                    <li>Optimized LiveGraph's performance, reducing CPU usage by 2x and database load by 5x, to handle high-volume data streams (10,000+ writes/second) and support Figma's rapid user growth</li>
+                    <li>Led the adoption of LiveGraph across Figma, working closely with product teams to integrate it into critical features and scale it for new products like FigJam and mobile app integration</li>
+                    <li>Implemented scalability improvements and developed strategies to mitigate challenges like thundering herd problems during deployments</li>
+                    <li>Collaborated with cross-functional teams to create tools and workflows for schema evolution, versioning, and integration with other infrastructure projects like Changestream and Kafka</li>
+                    <li>Fostered team growth through mentorship, knowledge-sharing initiatives, and establishing best practices, significantly contributing to LiveGraph's documentation and developer experience. Grew the team from 3 ICs to 8 ICs + EM.</li>
+                    <li>Led efforts to improve LiveGraph's operational stability, implementing controls for dynamic throughput, query blocklisting, and improved monitoring</li>
+                </ul>
+            </div>
         </div>
 
         <div id="mit-content" class="hidden">
@@ -256,15 +286,11 @@
 
         <!-- Hidden content blocks -->
         <div id="overview-content" class="hidden">
-            <div class="grid grid-cols-3 gap-6">
-                <div class="col-span-2 row-span-2" id="overview-figma"></div>
-                <div id="overview-mit"></div>
-                <div id="overview-meteor"></div>
-            </div>
+            <div id="overview-figma"></div>
+            <div id="overview-mit"></div>
         </div>
 
         <div id="experience-content" class="hidden">
-            <h2 class="text-2xl font-bold mb-6">Experience</h2>
 
             <div class="mb-8" id="experience-figma"></div>
 
@@ -286,22 +312,21 @@
                         document.getElementById("figma-content").innerHTML;
                     document.getElementById("overview-mit").innerHTML =
                         document.getElementById("mit-content").innerHTML;
-                    document.getElementById("overview-meteor").innerHTML =
-                        document.getElementById("meteor-content").innerHTML;
                 } else if (pageName === "experience") {
-                    document.getElementById("experience-figma").innerHTML =
-                        document.getElementById("figma-content").innerHTML;
-                    document.getElementById("experience-meteor").innerHTML =
-                        document.getElementById("meteor-content").innerHTML;
-                    document.getElementById(
-                        "experience-internships",
-                    ).innerHTML = document.getElementById(
-                        "internships-content",
-                    ).innerHTML;
+                  document.getElementById("experience-figma").innerHTML =
+                      document.getElementById("figma-content").innerHTML;
+                  document.getElementById("experience-meteor").innerHTML =
+                      document.getElementById("meteor-content").innerHTML;
+                  document.getElementById(
+                      "experience-internships",
+                  ).innerHTML = document.getElementById(
+                      "internships-content",
+                  ).innerHTML;
 
-                    // Add "View details" buttons for Figma sections
-                    addViewDetailsButton("editor-performance-details");
-                    addViewDetailsButton("livegraph-details");
+                  // Unhide buttons with class "hidden"
+                  document.querySelectorAll('#experience-figma button.hidden').forEach(button => {
+                      button.classList.remove('hidden');
+                  });
                 }
 
                 // Update active nav button
@@ -316,20 +341,6 @@
                 document.body.classList.remove("font-sans");
                 void document.body.offsetWidth;
                 document.body.classList.add("font-sans");
-            }
-
-            function addViewDetailsButton(id) {
-                const detailsElement = document.getElementById(id);
-                if (detailsElement) {
-                    const button = document.createElement("button");
-                    button.className = "text-blue-600 hover:underline mb-4";
-                    button.textContent = "View details";
-                    button.onclick = () => toggleDetails(id);
-                    detailsElement.parentNode.insertBefore(
-                        button,
-                        detailsElement,
-                    );
-                }
             }
 
             function toggleDetails(id) {
