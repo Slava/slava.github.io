@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Slava Kim</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <style>
+        * { font-family: "Roboto", sans-serif;}
+        h2, h3 { font-family: "Open Sans", sans-serif; }
             .hidden {
                 display: none;
             }
@@ -13,12 +17,11 @@
     </head>
     <body class="font-sans bg-white text-gray-900">
         <div class="max-w-5xl mx-auto p-6">
-            <header class="mb-8">
-                <h1 class="text-4xl font-bold mb-2">Slava Kim</h1>
+            <header class="mb-8 flex justify-between">
+                <h1 class="text-4xl"> <span class="font-weight-400 mb-2">Slava</span> <span class="font-thin">Kim</span></h1>
                 <div class="flex items-center text-gray-600">
-                    <span class="mr-4">hi@slv.io</span>
-                    <span class="mr-4">slv.io</span>
-                    <span>SF, CA</span>
+                    <a href="mailto:hi@slv.io" class="mr-4">hi@slv.io</a>
+                    <a href="https://slv.io">slv.io</a>
                 </div>
             </header>
 
