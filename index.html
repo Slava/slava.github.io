@@ -15,7 +15,7 @@
         html { scrollbar-gutter: stable;}
         </style>
     </head>
-    <body class="font-sans bg-white text-gray-900">
+    <body class="font-sans bg-white text-gray-900 py-8">
         <div class="max-w-5xl mx-auto p-6">
             <header class="mb-8 flex justify-between">
                 <h1 class="text-4xl cursor-pointer" onclick="showPage('overview')"> <span class="font-weight-400 mb-2">Slava</span> <span class="font-thin">Kim</span></h1>
@@ -54,9 +54,9 @@
                     <li class="flex-1">
                         <button
                             class="w-full py-2"
-                            onclick="showPage('contracting')"
+                            onclick="showPage('consulting')"
                         >
-                            Contracting
+                            Consulting
                         </button>
                     </li>
                 </ul>
@@ -259,7 +259,7 @@
             </ul>
         </div>
         <div id="meteor-content" class="hidden">
-            <h3 class="text-2xl font-bold mb-2">Meteor</h3>
+            <h3 class="text-2xl font-bold mb-2">Apollo GraphQL / Meteor</h3>
             <p class="text-sm text-gray-600 mb-4">
                 May 2013 - Aug 2015 | San Francisco, CA
             </p>
@@ -393,6 +393,65 @@
             <div id="experience-internships"></div>
         </div>
 
+        <div id="consulting-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Consulting Services</h2>
+            <div class="space-y-8">
+                <div>
+                    <p class="mb-4">I provide high-impact software engineering consulting services for companies facing complex technical challenges. My areas of expertise include:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Full-stack web application development</li>
+                        <li>Performance optimization and scalability solutions</li>
+                        <li>Real-time systems architecture</li>
+                        <li>System design and architecture</li>
+                        <li>Mentorship for technical leads and individual contributors in your organization</li>
+                    </ul>
+                </div>
+
+                <p class="mb-4">With over 8 years of experience building scalable systems at companies like Figma, I offer rapid, effective solutions to challenging engineering problems.</p>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Why Work With Me?</h3>
+                    <ul class="space-y-4">
+                        <li><span class="font-semibold">Proven Track Record:</span> I've led critical projects that have impacted millions of users, including Figma's LiveGraph real-time data system and performance testing framework. <a href="#" onclick="showPage('experience'); return false;" class="text-blue-600 hover:underline">See my experience for more details</a>.</li>
+                        <li><span class="font-semibold">Full-Stack Mastery:</span> From low-level backend optimizations to high-performance frontend implementations, I bring deep knowledge across the entire software stack.</li>
+                        <li><span class="font-semibold">Rapid Problem Solving:</span> I excel at quickly grasping complex systems and delivering impactful solutions under tight deadlines.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-4">Past Contracts</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-medium mb-2">Optimizing Real-Time Notifications</h4>
+                            <p>A client hired me to optimize their real-time in-app notifications pipeline. I developed a custom, highly efficient solution based on MongoDB capped tables that seamlessly integrated with their existing MongoDB infrastructure. This tailored approach significantly improved their notification system's performance and scalability.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium mb-2">Scaling a Redis-Based Serverless Platform</h4>
+                            <p>A client engaged me to design a solution for scaling their Redis-based scheduling system for executing customer functions. I created a comprehensive design document that addressed complex requirements including queue fault-tolerance and results caching, low latency, and seamless evolution of the existing system. Working closely with their engineering team, I iterated on the design and developed load tests to validate the proposed options paying attention to operational complexity and costs in addition to room for future growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-4">What I Offer</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>1-2 month engagement</li>
+                        <li>Full-time dedication to your project</li>
+                        <li>Flexible remote work arrangement</li>
+                        <li>Rate: $250/hour</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Contact</h3>
+                    <p>For inquiries about consulting services, please reach out via email:</p>
+                    <p class="mt-2">
+                        <a href="mailto:consulting@slv.io" class="text-blue-600 hover:underline">consulting@slv.io</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <script>
             function showPage(pageName) {
                 // Update URL hash
@@ -401,6 +460,8 @@
                 } else {
                     history.pushState(null, '', `#${pageName}`);
                 }
+                // Scroll to the top of the page
+                window.scrollTo(0, 0);
                 const content = document.getElementById("content");
                 const pageContent = document.getElementById(
                     `${pageName}-content`,
@@ -482,7 +543,7 @@
 
             // Show overview page by default
             const hash = window.location.hash.slice(1);
-            if (hash && ['overview', 'experience', 'projects', 'contracting'].includes(hash)) {
+            if (hash && ['overview', 'experience', 'projects', 'consulting'].includes(hash)) {
                 showPage(hash);
             } else {
                 showPage("overview");
