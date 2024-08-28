@@ -18,7 +18,7 @@
     <body class="font-sans bg-white text-gray-900">
         <div class="max-w-5xl mx-auto p-6">
             <header class="mb-8 flex justify-between">
-                <h1 class="text-4xl"> <span class="font-weight-400 mb-2">Slava</span> <span class="font-thin">Kim</span></h1>
+                <h1 class="text-4xl cursor-pointer" onclick="showPage('overview')"> <span class="font-weight-400 mb-2">Slava</span> <span class="font-thin">Kim</span></h1>
                 <div class="flex items-center text-gray-600">
                     <a href="mailto:hi@slv.io" class="mr-4">hi@slv.io</a>
                     <a href="https://slv.io">slv.io</a>
@@ -190,7 +190,74 @@
             </ul>
             <p class="mt-4"> Teaching staff for the <a href="https://weblab.mit.edu" class="text-blue-600 hover:underline" target="_blankjk">weblab</a> class</p>
         </div>
+        <div id="projects-content" class="hidden">
+            <div id="projects-labeltool" class="mb-8"></div>
+            <div id="projects-figma" class="mb-8"></div>
+            <div id="projects-graphql" class="mb-8"></div>
+            <div id="projects-korean" class="mb-8"></div>
+        </div>
 
+        <div id="labeltool-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-2">LabelTool</h2>
+            <p class="mb-4">
+                An open-source tool for labeling and semantic segmentation of images for ML and computer vision projects. Originally developed during an internship, this is a stand-alone version that got popular among companies in Asia.
+            </p>
+            <img src="https://github.com/Slava/label-tool/blob/master/client/src/help/tutorial/auto-tracing.gif?raw=true" class="my-4"/>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Gained over 350 stars on GitHub</li>
+                <li>Supports manual and model-assisted segmentation and labeling</li>
+                <li>Supports automatic tracing based on color using basic graph algorithms</li>
+                <li>Basic support for distributing the tasks to labeling agents</li>
+            </ul>
+            <p class="mt-4">
+                <a href="https://github.com/Slava/label-tool" class="text-blue-600 hover:underline mr-4" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
+                <a href="https://slv.io/label-tool/demo/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                    Live Demo
+                </a>
+            </p>
+        </div>
+
+        <div id="graphql-tools-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-2">GraphQL Tools</h2>
+            <p class="mb-4">
+                Contributions to various GraphQL tools and libraries.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Relay Developer Tools: Debugging tool for Relay applications (<a href="https://github.com/relayjs/relay-devtools" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>)</li>
+                <li>Apollo Client: Contributions to the popular GraphQL client library (<a href="https://github.com/apollographql/apollo-client" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>)
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li>Implemented support for mutations</li>
+                        <li>Developed optimistic updates functionality</li>
+                        <li>Fixed issues related to fragments</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="figma-projects-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-2">Figma Plugin: Brush Tracing</h2>
+            <p class="mb-4">
+                A Figma plugin that transforms any path into a brush tracing, offering fine-grained control over brush properties with a live preview.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Custom brush engine implemented using WebGL shaders for high-performance rendering</li>
+                <li>Intuitive interface for adjusting brush characteristics in real-time</li>
+                <li>Seamless integration with Figma's existing path tools and workflows</li>
+            </ul>
+            <p class="mt-4">
+                <blockquote class="twitter-tweet"><a href="https://twitter.com/imslavko/status/1827053436971397625?ref_src=twsrc%5Etfw"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>
+        </div>
+        <div id="korean-projects-content" class="hidden">
+            <h2 class="text-2xl font-bold mb-2">Korean Learning Projects</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><a href="https://github.com/Slava/lang-xchange" class="text-blue-600 hover:underline">Language Exchange</a>: a web-app application that facilitates language exchange between Korean and English speakers, featuring conversation topic suggestions, multiple fluency levels, vocab help.</li>
+                <li><a href="https://github.com/Slava/netflix-ko-vocab" class="text-blue-600 hover:underline">Netflix Korean Learning Mode</a>: a browser extension that enhances Korean language learning while watching Netflix.</li>
+                <li><a href="https://github.com/Slava/klyrics" class="text-blue-600 hover:underline">Klyrics</a>: a web application for searching and studying Korean song lyrics with English translations.</li>
+            </ul>
+        </div>
         <div id="meteor-content" class="hidden">
             <h3 class="text-2xl font-bold mb-2">Meteor</h3>
             <p class="text-sm text-gray-600 mb-4">
@@ -298,7 +365,7 @@
                     <ul class="list-disc pl-5">
                         <li>
                             Developed a tool for labeling images and CV data
-                            collection: Label Tool [300+ stars]
+                            collection: Label Tool (350+ stars on <a href="https://github.com/Slava/label-tool" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="#" onclick="showPage('projects'); return false;" class="text-blue-600 hover:underline">see project details</a>)
                         </li>
                     </ul>
                 </div>
@@ -328,6 +395,12 @@
 
         <script>
             function showPage(pageName) {
+                // Update URL hash
+                if (pageName === 'overview') {
+                    history.pushState(null, '', '#');
+                } else {
+                    history.pushState(null, '', `#${pageName}`);
+                }
                 const content = document.getElementById("content");
                 const pageContent = document.getElementById(
                     `${pageName}-content`,
@@ -378,12 +451,14 @@
                       button.classList.remove('hidden');
                   });
                 } else if (pageName === "projects") {
-                  document.getElementById("projects-meteor").innerHTML =
-                      document.getElementById("meteor-projects-content").innerHTML;
                   document.getElementById("projects-labeltool").innerHTML =
                       document.getElementById("labeltool-content").innerHTML;
                   document.getElementById("projects-figma").innerHTML =
                       document.getElementById("figma-projects-content").innerHTML;
+                  document.getElementById("projects-graphql").innerHTML =
+                      document.getElementById("graphql-tools-content").innerHTML;
+                  document.getElementById("projects-korean").innerHTML =
+                      document.getElementById("korean-projects-content").innerHTML;
                 }
 
                 // Update active nav button
@@ -406,7 +481,12 @@
             }
 
             // Show overview page by default
-            showPage("overview");
+            const hash = window.location.hash.slice(1);
+            if (hash && ['overview', 'experience', 'projects', 'contracting'].includes(hash)) {
+                showPage(hash);
+            } else {
+                showPage("overview");
+            }
         </script>
     </body>
 </html>
